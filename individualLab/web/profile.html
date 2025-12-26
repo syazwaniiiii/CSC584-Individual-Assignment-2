@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Profile</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center">Personal Profile</h2>
+
+        <form action="ProfileServlet" method="POST">
+
+            <!-- Personal Information Section -->
+            <fieldset class="border p-3 mb-4">
+                <legend class="w-auto px-2 medium">Personal Information</legend>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" required class="form-control">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required class="form-control">
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Academic Details -->
+            <fieldset class="border p-3 mb-4">
+                <legend class="w-auto px-2 medium">Academic Details</legend>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="studentID">Student ID</label>
+                        <input type="text" name="studentID" id="studentID" required class="form-control">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="program_code">Program Code</label>
+                        <input type="text" name="program_code" id="program_code" required class="form-control">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="program">Program</label>
+                        <input type="text" name="program" id="program" required class="form-control">
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Hobbies Section -->
+            <fieldset class="border p-3 mb-4">
+                <legend class="w-auto px-2 medium">Hobbies</legend>
+
+                <div class="form-group">
+                    <label for="hobbies">List your hobbies</label>
+                    <input type="text" name="hobbies" id="hobbies" class="form-control" placeholder="e.g., Reading, Sports, Music">
+                </div>
+            </fieldset>
+
+            <!-- About Me -->
+            <fieldset class="border p-3 mb-4">
+                <legend class="w-auto px-2 medium">About Me</legend>
+
+                <div class="form-group">
+                    <label for="selfIntroduction">Short Self-Introduction</label>
+                    <textarea id="selfIntroduction" name="selfIntroduction" rows="4" required class="form-control"></textarea>
+                </div>
+            </fieldset>
+
+            <!-- Button -->
+            <button type="submit" class="btn btn-primary btn-block">
+                Create My Profile
+            </button>
+
+        </form>
+        <!-- FORM END -->
+    </div>
+
+</body>
+</html>
